@@ -14,6 +14,11 @@ auto-ls-ls () {
   [[ $AUTO_LS_NEWLINE != false ]] && echo ""
 }
 
+auto-ls-lsd () {
+	lsd
+	[[ $AUTO_LS_NEWLINE != false ]] && echo ""
+}
+
 auto-ls-git-status () {
   if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == true ]]; then
     git status
